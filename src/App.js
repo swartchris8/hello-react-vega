@@ -1,5 +1,6 @@
 import React from 'react';
 import { Vega } from 'react-vega';
+import Table from './Table.js';
 
 // chart config
 const jobpalBlue = '#e0e0e0';
@@ -107,11 +108,27 @@ const App = () => {
     { length: yAxisMaxValueFor('active_users', 'user_comments') },
   ).map((v, i) => (i + 1));
 
+  function element_to_row(element) {
+    var arrayLength = columns.length;
+    for (var i = 0; i < arrayLength; i++) {
+      var column = columns[i];
+      //Do something
+      return <td>{element[column]}</td>
+    }
+  }
 
   const spec = getSpec(yAxisValues, data.length);
 
+  const columns = ["Name", "Value"];
+  const rows = [{"Name": "Hector", "Value": 1}, {"Name": "Santi", "Value": 2}]
+
   return (
     <div className="App">
+      Hello, React
+      <br/> Table 1 data
+      <Table data={data}/>
+      <br/> Table 2
+      <Table data={rows}/>
       <Vega
         spec={{
           ...spec,

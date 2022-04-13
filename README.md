@@ -1,3 +1,7 @@
+# Hello React Vega
+
+Based off https://medium.com/jobpal-dev/how-to-create-a-beautiful-time-series-visualisation-with-react-vega-3fd3e22ec445
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
